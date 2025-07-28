@@ -43,10 +43,12 @@ input[type="search"]:focus {
     position: relative;
 }
 
-.info-card:hover {
-    transform: translateY(-4px);
-    z-index: 10;
-    background-color: #ffffff;
+@media (min-width: 1024px) {
+    .info-card:hover {
+        transform: translateY(-4px);
+        z-index: 10;
+        background-color: #ffffff;
+    }
 }
 
 /* Swiper Pagination Styles */
