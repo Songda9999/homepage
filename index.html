@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>佰易帮助中心</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Zendesk script - loaded but widget hidden by default -->
+    <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=f75b1f00-7a81-4047-ae93-e0ca023a9689"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans overflow-x-hidden">
+    <nav class="top-nav bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <img class="h-8 w-auto light-logo" src="https://i.ibb.co/vCv92HS7/byexlogo.png" alt="BYEX Logo">
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="https://www.100ex.com/zh_CN/market" data-translate-href="nav_market_url" class="text-gray-700 px-3 py-2 rounded-md text-sm font-semibold" data-translate-key="nav_market">市场行情</a>
+                            <div class="relative group">
+                                <button class="text-gray-700 px-3 py-2 rounded-md text-sm font-semibold flex items-center">
+                                    <span data-translate-key="nav_spot">现货交易</span>
+                                    <svg class="dropdown-arrow w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="dropdown-menu absolute z-10 bg-white rounded-md shadow-lg py-1 w-40 border border-gray-200">
+                                    <a href="https://www.100ex.com/zh_CN/trade?tradeType=1" data-translate-href="nav_spot_basic_url" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-translate-key="nav_spot_basic">币币交易</a>
+                                    <a href="https://www.100ex.com/zh_CN/margin/BTC_USDT" data-translate-href="nav_spot_margin_url" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-translate-key="nav_spot_margin">杠杆交易</a>
+                                    <a href="https://www.100ex.com/zh_CN/trade?tradeType=3" data-translate-href="nav_spot_grid_url" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-translate-key="nav_spot_grid">网格交易</a>
+                                </div>
+                            </div>
+                            <a href="https://futures.100ex.com/zh_CN" data-translate-href="nav_futures_url" class="text-gray-700 px-3 py-2 rounded-md text-sm font-semibold" data-translate-key="nav_futures">合约交易</a>
+                            <div class="relative group">
+                                <button class="text-gray-700 px-3 py-2 rounded-md text-sm font-semibold flex items-center">
+                                    <span data-translate-key="nav_c2c">C2C 交易</span>
+                                    <svg class="dropdown-arrow w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="dropdown-menu absolute z-10 bg-white rounded-md shadow-lg py-1 w-40 border border-gray-200">
+                                    <a href="https://otc.100ex.com/zh_CN/C2C" data-translate-href="nav_c2c_normal_url" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-translate-key="nav_c2c_normal">普通交易</a>
+                                    <a href="https://otc.100ex.com/zh_CN/C2C/merchant/publishAd" data-translate-href="nav_c2c_ad_url" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-translate-key="nav_c2c_ad">发布广告</a>
+                                    <a href="https://otc.100ex.com/zh_CN/C2C/applyMerchant" data-translate-href="nav_c2c_merchant_url" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" data-translate-key="nav_c2c_merchant">申请商户</a>
+                                </div>
+                            </div>
+                            <a href="https://www.100ex.com/zh_CN/finance" data-translate-href="nav_finance_url" class="text-gray-700 px-3 py-2 rounded-md text-sm font-semibold" data-translate-key="nav_finance">金融理财</a>
+                            <a href="https://www.100ex.com/zh_CN/BYB" data-translate-href="nav_byb_url" class="text-gray-700 px-3 py-2 rounded-md text-sm font-semibold" data-translate-key="nav_byb">BYB 专区</a>
+                            <a href="https://www.100ex.com/zh_CN/toLoan" data-translate-href="nav_loan_url" class="text-gray-700 px-3 py-2 rounded-md text-sm font-semibold" data-translate-key="nav_loan">抵押借贷</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <button id="language-menu-button" class="flex items-center text-gray-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    </button>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" id="mobile-menu-button" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-dark" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">              
+                <div>
+                    <button class="mobile-accordion-trigger w-full flex justify-between items-center text-gray-700 px-3 py-2 rounded-md text-base font-semibold">
+                        <span data-translate-key="nav_spot">现货交易</span>
+                        <svg class="chevron-icon w-5 h-5 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </button>
+                    <div class="mobile-submenu pl-5 pr-3">
+                        <a href="https://www.100ex.com/zh_CN/trade?tradeType=1" data-translate-href="nav_spot_basic_url" class="text-gray-700 block py-2 rounded-md text-base font-medium" data-translate-key="nav_spot_basic">币币交易</a>
+                        <a href="https://www.100ex.com/zh_CN/margin/BTC_USDT" data-translate-href="nav_spot_margin_url" class="text-gray-700 block py-2 rounded-md text-base font-medium" data-translate-key="nav_spot_margin">杠杆交易</a>
+                    </div>
+                </div>
+
+                <a href="https://mfutures.100ex.com/zh_CN/" data-translate-href="nav_futures_mobile_url" class="text-gray-700 block px-3 py-2 rounded-md text-base font-semibold" data-translate-key="nav_futures">合约交易</a>                
+                <a href="https://www.100ex.com/zh_CN/finance" data-translate-href="nav_finance_url" class="text-gray-700 block px-3 py-2 rounded-md text-base font-semibold" data-translate-key="nav_finance">金融理财</a>
+                <a href="https://www.100ex.com/zh_CN/BYB" data-translate-href="nav_byb_url" class="text-gray-700 block px-3 py-2 rounded-md text-base font-semibold" data-translate-key="nav_byb">BYB 专区</a>
+                <a href="https://www.100ex.com/zh_CN/toLoan" data-translate-href="nav_loan_url" class="text-gray-700 block px-3 py-2 rounded-md text-base font-semibold" data-translate-key="nav_loan">抵押借贷</a>
+                <div class="border-t border-gray-200 my-4"></div>
+                <div class="px-3 py-2 flex items-center justify-between">
+                    <span class="font-medium text-gray-700" data-translate-key="nav_switch_lang">切换语言</span>
+                    <button id="mobile-language-button" class="flex items-center text-gray-700">
+                        <span id="mobile-language-text">简体中文</span>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="welcome-header relative text-center py-12 sm:py-20">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold text-gray-600 mb-4" data-translate-key="header_welcome">欢迎访问</h2>
+            <div class="relative inline-block mt-4 mb-8">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold" data-translate-key="header_title">佰易帮助中心</h1>
+                <svg class="absolute top-0 left-full w-12 h-12 sm:w-16 sm:h-16 object-contain transform -translate-y-1/4 ml-1" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#00cfb6">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M29.9979 4.99902C16.1911 4.99902 4.99756 16.1925 4.99756 29.9994C4.99756 35.6653 6.88327 40.8909 10.0605 45.0841L6.77905 54.0101L16.8466 51.2643C20.6667 53.6322 25.1726 54.9997 29.9979 54.9997C43.8047 54.9997 54.9982 43.8072 54.9982 29.9994C54.9982 16.1916 43.8047 4.99902 29.9979 4.99902ZM42.0026 29.0002V35.6669H39.9819C38.2611 38.2376 35.5733 40.1064 32.4389 40.7528C32.0231 41.6843 31.0887 42.3336 30.0026 42.3336C28.5298 42.3336 27.3359 41.1397 27.3359 39.6669C27.3359 38.1942 28.5298 37.0002 30.0026 37.0002C30.8833 37.0002 31.6643 37.4272 32.1499 38.0854C33.833 37.6891 35.3404 36.8372 36.5346 35.6669H35.3359V27.6669H38.5673C37.926 23.5135 34.3357 20.3336 30.0026 20.3336C25.6696 20.3336 22.0792 23.5135 21.4379 27.6669H24.6693V35.6669H18.0026V29.0002C18.0026 22.3728 23.3752 17.0002 30.0026 17.0002C36.1793 17.0002 41.2661 21.667 41.9294 27.6669C41.9333 27.7023 41.937 27.7378 41.9406 27.7733C41.9816 28.1767 42.0026 28.586 42.0026 29.0002Z"/>
+                </svg>
+            </div>
+            <div class="max-w-2xl mx-auto">
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <input type="search" id="header-search" placeholder="搜索或提问" class="w-full p-4 pl-12 bg-white border-2 border-gray-200 rounded-lg transition-colors duration-200">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container-bg bg-white">
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8 py-6 sm:py-8">
+
+            <section>
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold" data-translate-key="self_service_title">自助服务</h2>
+
+                                        <a href="selfservice.html" data-translate-href="self_service_more_url" class="text-sm font-medium brand-text brand-hover" data-translate-key="more">更多 &gt;</a>
+                </div>
+                
+                    <div class="hidden md:block">
+                        <div class="swiper pt-2" id="self-service-carousel-desktop">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="grid grid-cols-4 gap-4 sm:gap-6">
+                                        <a href="article.html?article=42474568545945" data-translate-href="service_card_1_url" class="info-card bg-white p-4 sm:p-6 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3 sm:space-x-4"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/PsDCRWvG/download.png" alt="注册与下载指南图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm sm:text-base" data-translate-key="service_card_1_title">注册与下载指南</h3><p class="hidden sm:block text-sm text-gray-500 mt-1" data-translate-key="service_card_1_desc">iOS/安卓下载教程及注册流程，含海外 ID 切换说明</p></div></div></a>
+                                        <a href="article.html?article=47818498645401" data-translate-href="service_card_2_url" class="info-card bg-white p-4 sm:p-6 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3 sm:space-x-4"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/0yrXCNVb/shield-check.png" alt="账号安全设置图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm sm:text-base" data-translate-key="service_card_2_title">账户安全设置</h3><p class="hidden sm:block text-sm text-gray-500 mt-1" data-translate-key="service_card_2_desc">绑定邮箱手机、设置密码、开启谷歌验证</p></div></div></a>
+                                        <a href="article.html?article=47864448152985" data-translate-href="service_card_3_url" class="info-card bg-white p-4 sm:p-6 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3 sm:space-x-4"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/ksPHxY7d/user-trust.png" alt="身份认证图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm sm:text-base" data-translate-key="service_card_3_title">身份认证</h3><p class="hidden sm:block text-sm text-gray-500 mt-1" data-translate-key="service_card_3_desc">提交身份证件信息以提升账户等级和安全性</p></div></div></a>
+                                        <a href="article.html?article=47994030905241    " data-translate-href="service_card_4_url" class="info-card bg-white p-4 sm:p-6 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3 sm:space-x-4"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/ksjNmDgd/priority-arrows.png" alt="充值与提现图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm sm:text-base" data-translate-key="service_card_4_title">充值与提现</h3><p class="hidden sm:block text-sm text-gray-500 mt-1" data-translate-key="service_card_4_desc">链上确认时间、到账异常、最小限额等问题</p></div></div></a>
+                                        <a href="#" data-translate-href="service_card_5_url" class="info-card bg-white p-4 sm:p-6 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3 sm:space-x-4"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/Kp0QJBkY/otp.png" alt="验证码与验证器问题图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm sm:text-base" data-translate-key="service_card_5_title">验证码与验证器问题</h3><p class="hidden sm:block text-sm text-gray-500 mt-1" data-translate-key="service_card_5_desc">验证码收不到、谷歌验证器重置等处理方式</p></div></div></a>
+                                        <a href="#" data-translate-href="service_card_6_url" class="info-card bg-white p-4 sm:p-6 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3 sm:space-x-4"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/wN8Xfhxq/coins-crypto.png" alt="交易操作指南图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm sm:text-base" data-translate-key="service_card_6_title">交易操作指南</h3><p class="hidden sm:block text-sm text-gray-500 mt-1" data-translate-key="service_card_6_desc">现货、合约等交易流程，含资金划转</p></div></div></a>
+                                        <a href="#" data-translate-href="ser
+                                        vice_card_7_url" class="info-card bg-white p-4 sm:p-6 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3 sm:space-x-4"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/F45rFbjD/document-signed.png" alt="合约交易解答图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm sm:text-base" data-translate-key="service_card_7_title">合约交易问答</h3><p class="hidden sm:block text-sm text-gray-500 mt-1" data-translate-key="service_card_7_desc">张数、保证金、资金费率、回报率等核心概念解读</p></div></div></a>
+                                        <a href="#" data-translate-href="service_card_8_url" class="info-card bg-white p-4 sm:p-6 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3 sm:space-x-4"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/9mwzT1N8/gift.png" alt="活动与奖励公告图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm sm:text-base" data-translate-key="service_card_8_title">活动与奖励公告</h3><p class="hidden sm:block text-sm text-gray-500 mt-1" data-translate-key="service_card_8_desc">最新活动说明、参与条件、奖励发放公示</p></div></div></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="grid grid-cols-4 gap-4 sm:gap-6">
+                                        <a href="#" data-translate-href="service_card_9_url" class="info-card bg-white p-4 sm:p-6 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3 sm:space-x-4"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/HffS1zwB/users.png" alt="C2C 交易图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm sm:text-base" data-translate-key="service_card_9_title">C2C 交易</h3><p class="hidden sm:block text-sm text-gray-500 mt-1" data-translate-key="service_card_9_desc">C2C 买卖流程、订单风控与申诉处理</p></div></div></a>
+                                        <a href="#" data-translate-href="service_card_10_url" class="info-card bg-white p-4 sm:p-6 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3 sm:space-x-4"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/mrG9SvVW/send-money.png" alt="批量转账图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm sm:text-base" data-translate-key="service_card_10_title">批量转账</h3><p class="hidden sm:block text-sm text-gray-500 mt-1" data-translate-key="service_card_10_desc">支持按 UID 批量发起内部转账，适用于多账户资金划转</p></div></div></a>
+                                        <a href="#" data-translate-href="service_card_11_url" class="info-card bg-white p-4 sm:p-6 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3 sm:space-x-4"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/CpyvbN7b/piggy-bank.png" alt="金融理财图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm sm:text-base" data-translate-key="service_card_11_title">金融理财</h3><p class="hidden sm:block text-sm text-gray-500 mt-1" data-translate-key="service_card_11_desc">活期、定期、余额宝等理财功能的参与方式与规则</p></div></div></a>
+                                        <a href="#" data-translate-href="service_card_12_url" class="info-card bg-white p-4 sm:p-6 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3 sm:space-x-4"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/WpstdXYD/discount.png" alt="抵押借贷图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm sm:text-base" data-translate-key="service_card_12_title">抵押借贷</h3><p class="hidden sm:block text-sm text-gray-500 mt-1" data-translate-key="service_card_12_desc">使用加密资产作为抵押，获取 USDT 借贷额度</p></div></div></a>
+                                        <a href="#" data-translate-href="service_card_13_url" class="info-card bg-white p-4 sm:p-6 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3 sm:space-x-4"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/4nVnVk6D/link-alt.png" alt="推广返佣计划图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm sm:text-base" data-translate-key="service_card_13_title">推广返佣计划</h3><p class="hidden sm:block text-sm text-gray-500 mt-1" data-translate-key="service_card_13_desc">邀请好友赚返佣，查看邀请记录和返佣比</p></div></div></a>
+                                        <a href="#" data-translate-href="service_card_14_url" class="info-card bg-white p-4 sm:p-6 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3 sm:space-x-4"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/352M9kQm/percentage.png" alt="手续费与费率说明图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm sm:text-base" data-translate-key="service_card_14_title">手续费与费率说明</h3><p class="hidden sm:block text-sm text-gray-500 mt-1" data-translate-key="service_card_14_desc">吃单/挂单、充提、合约等手续费标准说明</p></div></div></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-center items-center mt-8 space-x-6">
+                            <button class="swiper-button-prev-desktop text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center">
+                                <span class="sr-only">Previous slide</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+                            </button>
+                            <div class="swiper-pagination-desktop !static !w-auto"></div>
+                            <button class="swiper-button-next-desktop text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center">
+                                <span class="sr-only">Next slide</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                <div class="md:hidden">
+                    <div class="swiper pt-2" id="self-service-carousel-mobile">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><div class="grid grid-cols-2 gap-4"><a href="#" data-translate-href="service_card_1_url" class="info-card bg-white p-4 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/PsDCRWvG/download.png" alt="注册与下载指南图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm" data-translate-key="service_card_1_title">注册与下载指南</h3><p class="text-xs text-gray-500 mt-1" data-translate-key="service_card_1_desc_mobile">iOS/安卓下载教程及注册流程</p></div></div></a><a href="#" data-translate-href="service_card_2_url" class="info-card bg-white p-4 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/0yrXCNVb/shield-check.png" alt="账号安全设置图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm" data-translate-key="service_card_2_title">账户安全设置</h3><p class="text-xs text-gray-500 mt-1" data-translate-key="service_card_2_desc_mobile">绑定邮箱手机、设置密码等</p></div></div></a><a href="#" data-translate-href="service_card_3_url" class="info-card bg-white p-4 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/ksPHxY7d/user-trust.png" alt="身份认证图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm" data-translate-key="service_card_3_title">身份认证</h3><p class="text-xs text-gray-500 mt-1" data-translate-key="service_card_3_desc_mobile">提升账户等级和安全性</p></div></div></a><a href="#" data-translate-href="service_card_4_url" class="info-card bg-white p-4 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/ksjNmDgd/priority-arrows.png" alt="充值与提现图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm" data-translate-key="service_card_4_title">充值与提现</h3><p class="text-xs text-gray-500 mt-1" data-translate-key="service_card_4_desc_mobile">到账异常、最小限额等问题</p></div></div></a></div></div>
+                            <div class="swiper-slide"><div class="grid grid-cols-2 gap-4"><a href="#" data-translate-href="service_card_5_url" class="info-card bg-white p-4 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/Kp0QJBkY/otp.png" alt="验证码与验证器问题图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm" data-translate-key="service_card_5_title">验证码与验证器问题</h3><p class="text-xs text-gray-500 mt-1" data-translate-key="service_card_5_desc_mobile">验证码收不到、谷歌验证器重置</p></div></div></a><a href="#" data-translate-href="service_card_6_url" class="info-card bg-white p-4 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/wN8Xfhxq/coins-crypto.png" alt="交易操作指南图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm" data-translate-key="service_card_6_title">交易操作指南</h3><p class="text-xs text-gray-500 mt-1" data-translate-key="service_card_6_desc_mobile">现货、合约等交易流程</p></div></div></a><a href="#" data-translate-href="service_card_7_url" class="info-card bg-white p-4 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/F45rFbjD/document-signed.png" alt="合约交易解答图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm" data-translate-key="service_card_7_title">合约交易问答</h3><p class="text-xs text-gray-500 mt-1" data-translate-key="service_card_7_desc_mobile">保证金、资金费率等核心概念</p></div></div></a><a href="#" data-translate-href="service_card_8_url" class="info-card bg-white p-4 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/9mwzT1N8/gift.png" alt="活动与奖励公告图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm" data-translate-key="service_card_8_title">活动与奖励公告</h3><p class="text-xs text-gray-500 mt-1" data-translate-key="service_card_8_desc_mobile">最新活动、参与条件、奖励发放</p></div></div></a></div></div>
+                            <div class="swiper-slide"><div class="grid grid-cols-2 gap-4"><a href="#" data-translate-href="service_card_9_url" class="info-card bg-white p-4 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/HffS1zwB/users.png" alt="C2C 交易图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm" data-translate-key="service_card_9_title">C2C 交易</h3><p class="text-xs text-gray-500 mt-1" data-translate-key="service_card_9_desc_mobile">买卖流程、订单风控与申诉</p></div></div></a><a href="#" data-translate-href="service_card_10_url" class="info-card bg-white p-4 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/mrG9SvVW/send-money.png" alt="批量转账图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm" data-translate-key="service_card_10_title">批量转账</h3><p class="text-xs text-gray-500 mt-1" data-translate-key="service_card_10_desc_mobile">按 UID 批量发起内部转账</p></div></div></a><a href="#" data-translate-href="service_card_11_url" class="info-card bg-white p-4 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/CpyvbN7b/piggy-bank.png" alt="金融理财图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm" data-translate-key="service_card_11_title">金融理财</h3><p class="text-xs text-gray-500 mt-1" data-translate-key="service_card_11_desc_mobile">活期、定期、余额宝等功能</p></div></div></a><a href="#" data-translate-href="service_card_12_url" class="info-card bg-white p-4 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/WpstdXYD/discount.png" alt="抵押借贷图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm" data-translate-key="service_card_12_title">抵押借贷</h3><p class="text-xs text-gray-500 mt-1" data-translate-key="service_card_12_desc_mobile">使用加密资产获取USDT借贷</p></div></div></a></div></div>
+                            <div class="swiper-slide"><div class="grid grid-cols-2 gap-4"><a href="#" data-translate-href="service_card_13_url" class="info-card bg-white p-4 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/4nVnVk6D/link-alt.png" alt="推广返佣计划图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm" data-translate-key="service_card_13_title">推广返佣计划</h3><p class="text-xs text-gray-500 mt-1" data-translate-key="service_card_13_desc_mobile">邀请好友赚返佣</p></div></div></a><a href="#" data-translate-href="service_card_14_url" class="info-card bg-white p-4 rounded-lg border border-gray-200 block"><div class="flex items-start space-x-3"><div class="brand-icon-bg p-2 rounded-md flex-shrink-0"><img src="https://i.ibb.co/352M9kQm/percentage.png" alt="手续费与费率说明图标" class="w-6 h-6"></div><div><h3 class="font-semibold text-sm" data-translate-key="service_card_14_title">手续费与费率说明</h3><p class="text-xs text-gray-500 mt-1" data-translate-key="service_card_14_desc_mobile">吃单/挂单、充提、合约等</p></div></div></a></div></div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center mt-8">
+                        <div class="swiper-pagination-mobile !static !w-auto"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lg:hidden space-y-4">
+                <div class="flex justify-between items-center mb-2">
+                    <h2 class="text-2xl font-bold" data-translate-key="faq_title">常见问题</h2>
+                    <a href="#" data-translate-href="faq_more_url" class="text-sm font-medium brand-text brand-hover" data-translate-key="more">更多 &gt;</a>
+                </div>
+                <div class="accordion-item bg-white rounded-lg border border-gray-200">
+                    <button class="accordion-button w-full flex justify-between items-center p-4 text-left font-semibold">
+                        <span class="flex items-center"><img src="https://i.ibb.co/sdFGh0cF/flame.png" alt="热门问题图标" class="w-6 h-6 mr-2"><span data-translate-key="faq_popular">热门问题</span></span>
+                        <svg class="chevron-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="p-4 border-t border-gray-200">
+                            <ul id="zendesk-popular-list-mobile" class="space-y-3"><li></li></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-white rounded-lg border border-gray-200">
+                    <button class="accordion-button w-full flex justify-between items-center p-4 text-left font-semibold">
+                        <span class="flex items-center"><img src="https://i.ibb.co/k6VtcZYb/lightbulb-on.png" alt="最新发布文章图标" class="w-6 h-6 mr-2"><span data-translate-key="faq_latest">最新发布文章</span></span>
+                        <svg class="chevron-icon w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div id="zendesk-latest-list-mobile-container" class="p-4 border-t border-gray-200">
+                            <ul class="space-y-4"><li></li></ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="hidden lg:block">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold" data-translate-key="faq_title">常见问题</h2>
+                    <a href="#" data-translate-href="faq_more_url" class="text-sm font-medium brand-text brand-hover" data-translate-key="more">更多 &gt;</a>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 relative">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="font-bold text-lg flex items-center"><img src="https://i.ibb.co/sdFGh0cF/flame.png" alt="热门问题图标" class="w-6 h-6 mr-2"><span data-translate-key="faq_popular">热门问题</span></h3>
+                            <button id="refresh-popular" class="refresh-button text-gray-400 hover:text-brand-dark dark:hover:text-brand">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                            </button>
+                        </div>
+                        <ul id="zendesk-popular-list-desktop" class="space-y-4">
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 relative">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="font-bold text-lg flex items-center"><img src="https://i.ibb.co/k6VtcZYb/lightbulb-on.png" alt="最新发布文章图标" class="w-6 h-6 mr-2"><span data-translate-key="faq_latest">最新发布文章</span></h3>
+                            <button id="refresh-latest" class="refresh-button text-gray-400 hover:text-brand-dark dark:hover:text-brand">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                            </button>
+                        </div>
+                        <ul id="zendesk-latest-list-desktop" class="space-y-4">
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg border border-gray-200"><div class="flex justify-between items-center mb-4"><h3 class="font-bold text-lg" data-translate-key="guide_wallet_title">佰易钱包指南</h3><a href="#" data-translate-href="guide_wallet_more_url" class="text-sm font-medium brand-text brand-hover" data-translate-key="more">更多 &gt;</a></div><ul class="space-y-3"><li><a href="#" data-translate-href="guide_wallet_1_url" data-translate-key="guide_wallet_1">钱包专业模式简介</a></li><li><a href="#" data-translate-href="guide_wallet_2_url" data-translate-key="guide_wallet_2">如何使用钱包</a></li></ul></div>
+                <div class="bg-white p-6 rounded-lg border border-gray-200"><div class="flex justify-between items-center mb-4"><h3 class="font-bold text-lg" data-translate-key="guide_kyc_title">实名认证</h3><a href="#" data-translate-href="guide_kyc_more_url" class="text-sm font-medium brand-text brand-hover" data-translate-key="more">更多 &gt;</a></div><ul class="space-y-3"><li><a href="#" data-translate-href="guide_kyc_1_url" data-translate-key="guide_kyc_1">如何完成个人认证</a></li><li><a href="#" data-translate-href="guide_kyc_2_url" data-translate-key="guide_kyc_2">企业认证全流程</a></li></ul></div>
+                <div class="bg-white p-6 rounded-lg border border-gray-200"><div class="flex justify-between items-center mb-4"><h3 class="font-bold text-lg" data-translate-key="guide_c2c_title">佰易 C2C 介绍</h3><a href="#" data-translate-href="guide_c2c_more_url" class="text-sm font-medium brand-text brand-hover" data-translate-key="more">更多 &gt;</a></div><ul class="space-y-3"><li><a href="#" data-translate-href="guide_c2c_1_url" data-translate-key="guide_c2c_1">C2C交易介绍</a></li><li><a href="#" data-translate-href="guide_c2c_2_url" data-translate-key="guide_c2c_2">提领限额说明</a></li></ul></div>
+                <div class="bg-white p-6 rounded-lg border border-gray-200"><div class="flex justify-between items-center mb-4"><h3 class="font-bold text-lg" data-translate-key="guide_security_title">安全指南</h3><a href="#" data-translate-href="guide_security_more_url" class="text-sm font-medium brand-text brand-hover" data-translate-key="more">更多 &gt;</a></div><ul class="space-y-3"><li><a href="#" data-translate-href="guide_security_1_url" data-translate-key="guide_security_1">2FA 安全提示</a></li><li><a href="#" data-translate-href="guide_security_2_url" data-translate-key="guide_security_2">如何防范网络钓鱼</a></li></ul></div>
+            </section>
+
+            <section>
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold" data-translate-key="announcements_title">公告中心</h2>
+                    <a href="#" data-translate-href="announcements_more_url" class="text-sm font-medium brand-text brand-hover" data-translate-key="more">更多 &gt;</a>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+                    <a href="#" data-translate-href="announcements_1_url" class="info-card bg-white p-4 sm:p-6 rounded-lg border border-gray-200 flex flex-col items-center justify-center text-center"><div class="brand-icon-bg p-3 rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="brand-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div><h3 class="font-semibold text-sm sm:text-base" data-translate-key="announcements_1">数字货币及交易对上新</h3></a>
+                    <a href="#" data-translate-href="announcements_2_url" class="info-card bg-white p-4 sm:p-6 rounded-lg border border-gray-200 flex flex-col items-center justify-center text-center"><div class="brand-icon-bg p-3 rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="brand-text"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg></div><h3 class="font-semibold text-sm sm:text-base" data-translate-key="announcements_2">佰易最新动态</h3></a>
+                    <a href="#" data-translate-href="announcements_3_url" class="info-card bg-white p-4 sm:p-6 rounded-lg border border-gray-200 flex flex-col items-center justify-center text-center"><div class="brand-icon-bg p-3 rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="brand-text"><path d="M20 12v1a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5"></path><path d="M19 5l-2 2-2-2"></path><path d="M19 5l2 2-2 2"></path><rect x="9" y="10" width="6" height="8" rx="1"></rect></svg></div><h3 class="font-semibold text-sm sm:text-base" data-translate-key="announcements_3">佰易最新活动</h3></a>
+                    <a href="#" data-translate-href="announcements_4_url" class="info-card bg-white p-4 sm:p-6 rounded-lg border border-gray-200 flex flex-col items-center justify-center text-center"><div class="brand-icon-bg p-3 rounded-full mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="brand-text"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div><h3 class="font-semibold text-sm sm:text-base" data-translate-key="announcements_4">法币及交易对上新</h3></a>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold text-center mb-4" data-translate-key="more_help_title">需要更多帮助？</h2>
+                <a href="#" data-translate-href="chat_support_card_url" id="open-chat-support-card" class="info-card bg-white p-4 sm:p-6 rounded-lg border border-gray-200 flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left">
+                    <div>
+                        <h3 class="font-bold text-lg" data-translate-key="more_help_chat_title">聊天支持</h3>
+                        <p class="text-gray-500 mt-2" data-translate-key="more_help_chat_desc">如有任何问题，请随时联系我们。聊天支持团队全天候为您提供服务。</p>
+                        <span class="text-sm font-medium brand-text brand-hover mt-3 inline-block" data-translate-key="more_help_chat_cta">查看更多</span>
+                    </div>
+                    <img src="https://i.ibb.co/M51V9Xv2/customer-care.png" alt="聊天支持图标" class="w-14 h-14 sm:w-16 sm:h-16 mt-3 sm:mt-0 sm:ml-4 object-contain" onerror="this.onerror=null;this.src='https://placehold.co/100x100/e6f9f7/00cfb6?text=Chat';">
+                </a>
+            </section>
+
+        </main>
+
+<footer class="pt-8 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="border-t border-gray-200 mb-8"></div>
+        
+        <div class="hidden lg:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            <div>
+                <h4 class="font-semibold mb-4" data-translate-key="footer_community">社区</h4>
+                <div class="community-icons grid grid-cols-4 gap-4">
+                    <a href="#" class="transition-opacity hover:opacity-80"><img src="https://i.ibb.co/xtcZJfSy/telegram.png" alt="Telegram" class="w-5 h-5"></a>
+                    <a href="#" class="transition-opacity hover:opacity-80"><img src="https://i.ibb.co/nqhZ0v1x/tik-tok.png" alt="TikTok" class="w-5 h-5"></a>
+                    <a href="#" class="transition-opacity hover:opacity-80"><img src="https://i.ibb.co/WWGs4jSW/facebook.png" alt="Facebook" class="w-5 h-5"></a>
+                    <a href="#" class="transition-opacity hover:opacity-80"><img src="https://i.ibb.co/Jjr4Cz0c/twitter-alt-circle.png" alt="X" class="w-5 h-5"></a>
+                    <a href="#" class="transition-opacity hover:opacity-80"><img src="https://i.ibb.co/0Rd3s3Bc/instagram.png" alt="Instagram" class="w-5 h-5"></a>
+                    <a href="#" class="transition-opacity hover:opacity-80"><img src="https://i.ibb.co/JFztk7R1/p5-13-coinmarketcap-1648145380.png" alt="CoinMarketCap" class="w-6 h-5"></a>
+                    <a href="#" class="transition-opacity hover:opacity-80"><img src="https://i.ibb.co/6RtjNnTt/youtube.png" alt="Youtube" class="w-5 h-5"></a>
+                </div>
+                <div class="flex flex-col items-start space-y-4 mt-6 text-sm">
+                    <button id="footer-language-button" class="flex items-center space-x-1 text-gray-700 hover:text-brand transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        <span id="footer-language-text">简体中文</span>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4" data-translate-key="footer_about">关于我们</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" data-translate-href="footer_about_1_url" data-translate-key="footer_about_1">关于我们</a></li>
+                    <li><a href="#" data-translate-href="footer_about_2_url" data-translate-key="footer_about_2">用户协议</a></li>
+                    <li><a href="#" data-translate-href="footer_about_3_url" data-translate-key="footer_about_3">免责声明</a></li>
+                    <li><a href="#" data-translate-href="footer_about_4_url" data-translate-key="footer_about_4">隐私条款</a></li>
+                    <li><a href="#" data-translate-href="footer_about_5_url" data-translate-key="footer_about_5">联系我们</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4" data-translate-key="footer_products">产品</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" data-translate-href="footer_products_1_url" data-translate-key="footer_products_1">交易所</a></li>
+                    <li><a href="#" data-translate-href="footer_products_2_url" data-translate-key="footer_products_2">支付钱包</a></li>
+                    <li><a href="#" data-translate-href="footer_products_3_url" data-translate-key="footer_products_3">C2C 交易</a></li>
+                    <li><a href="#" data-translate-href="footer_products_4_url" data-translate-key="footer_products_4">BYB 质押</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4" data-translate-key="footer_services">服务</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" data-translate-href="footer_services_1_url" data-translate-key="footer_services_1">费率标准</a></li>
+                    <li><a href="#" data-translate-href="footer_services_2_url" data-translate-key="footer_services_2">邀请好友</a></li>
+                    <li><a href="#" data-translate-href="footer_services_3_url" data-translate-key="footer_services_3">BYB 专区</a></li>
+                    <li><a href="#" data-translate-href="footer_services_4_url" data-translate-key="footer_services_4">公告中心</a></li>
+                    <li><a href="#" data-translate-href="footer_services_5_url" data-translate-key="footer_services_5">认证商家服务协议</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4" data-translate-key="footer_learn">学习</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" data-translate-href="footer_learn_1_url" data-translate-key="footer_learn_1">新手行业了解</a></li>
+                    <li><a href="#" data-translate-href="footer_learn_2_url" data-translate-key="footer_learn_2">区块链基础科普</a></li>
+                    <li><a href="#" data-translate-href="footer_learn_3_url" data-translate-key="footer_learn_3">区块链词典</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4" data-translate-key="footer_risk">风险与合规</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" data-translate-href="footer_risk_1_url" data-translate-key="footer_risk_1">风险告知书</a></li>
+                    <li><a href="#" data-translate-href="footer_risk_2_url" data-translate-key="footer_risk_2">违规交易说明</a></li>
+                    <li><a href="#" data-translate-href="footer_risk_3_url" data-translate-key="footer_risk_3">保证金参数</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="lg:hidden space-y-0">
+            <div class="accordion-item"><button class="accordion-button w-full flex justify-between items-center py-2 text-left font-semibold"><span data-translate-key="footer_about">关于我们</span><svg class="plus-icon w-5 h-5 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14m-7-7h14"/></svg></button><div class="accordion-content pl-4"><ul class="pt-2 space-y-2 text-sm"><li><a href="#" data-translate-href="footer_about_1_url" data-translate-key="footer_about_1">关于我们</a></li><li><a href="#" data-translate-href="footer_about_2_url" data-translate-key="footer_about_2">用户协议</a></li><li><a href="#" data-translate-href="footer_about_3_url" data-translate-key="footer_about_3">免责声明</a></li><li><a href="#" data-translate-href="footer_about_4_url" data-translate-key="footer_about_4">隐私条款</a></li><li><a href="#" data-translate-href="footer_about_5_url" data-translate-key="footer_about_5">联系我们</a></li></ul></div></div>
+            <div class="accordion-item"><button class="accordion-button w-full flex justify-between items-center py-2 text-left font-semibold"><span data-translate-key="footer_products">产品</span><svg class="plus-icon w-5 h-5 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14m-7-7h14"/></svg></button><div class="accordion-content pl-4"><ul class="pt-2 space-y-2 text-sm"><li><a href="#" data-translate-href="footer_products_1_url" data-translate-key="footer_products_1">交易所</a></li><li><a href="#" data-translate-href="footer_products_2_url" data-translate-key="footer_products_2">支付钱包</a></li><li><a href="#" data-translate-href="footer_products_3_url" data-translate-key="footer_products_3">C2C 交易</a></li><li><a href="#" data-translate-href="footer_products_4_url" data-translate-key="footer_products_4">BYB 质押</a></li></ul></div></div>
+            <div class="accordion-item"><button class="accordion-button w-full flex justify-between items-center py-2 text-left font-semibold"><span data-translate-key="footer_services">服务</span><svg class="plus-icon w-5 h-5 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14m-7-7h14"/></svg></button><div class="accordion-content pl-4"><ul class="pt-2 space-y-2 text-sm"><li><a href="#" data-translate-href="footer_services_1_url" data-translate-key="footer_services_1">费率标准</a></li><li><a href="#" data-translate-href="footer_services_2_url" data-translate-key="footer_services_2">邀请好友</a></li><li><a href="#" data-translate-href="footer_services_3_url" data-translate-key="footer_services_3">BYB 专区</a></li><li><a href="#" data-translate-href="footer_services_4_url" data-translate-key="footer_services_4">公告中心</a></li><li><a href="#" data-translate-href="footer_services_5_url" data-translate-key="footer_services_5">认证商家服务协议</a></li></ul></div></div>
+            <div class="accordion-item"><button class="accordion-button w-full flex justify-between items-center py-2 text-left font-semibold"><span data-translate-key="footer_learn">学习</span><svg class="plus-icon w-5 h-5 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14m-7-7h14"/></svg></button><div class="accordion-content pl-4"><ul class="pt-2 space-y-2 text-sm"><li><a href="#" data-translate-href="footer_learn_1_url" data-translate-key="footer_learn_1">新手行业了解</a></li><li><a href="#" data-translate-href="footer_learn_2_url" data-translate-key="footer_learn_2">区块链基础科普</a></li><li><a href="#" data-translate-href="footer_learn_3_url" data-translate-key="footer_learn_3">区块链词典</a></li></ul></div></div>
+            <div class="accordion-item"><button class="accordion-button w-full flex justify-between items-center py-2 text-left font-semibold"><span data-translate-key="footer_risk">风险与合规</span><svg class="plus-icon w-5 h-5 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14m-7-7h14"/></svg></button><div class="accordion-content pl-4"><ul class="pt-2 space-y-2 text-sm"><li><a href="#" data-translate-href="footer_risk_1_url" data-translate-key="footer_risk_1">风险告知书</a></li><li><a href="#" data-translate-href="footer_risk_2_url" data-translate-key="footer_risk_2">违规交易说明</a></li><li><a href="#" data-translate-href="footer_risk_3_url" data-translate-key="footer_risk_3">保证金参数</a></li></ul></div></div>
+        </div>
+
+<div class="lg:hidden mt-8">
+    <h4 class="font-semibold mb-4" data-translate-key="footer_community">社区</h4>
+    <div class="community-icons flex items-center space-x-5">
+        <a href="#" class="transition-opacity hover:opacity-80"><img src="https://i.ibb.co/xtcZJfSy/telegram.png" alt="Telegram" class="w-6 h-6"></a>
+        <a href="#" class="transition-opacity hover:opacity-80"><img src="https://i.ibb.co/nqhZ0v1x/tik-tok.png" alt="TikTok" class="w-6 h-6"></a>
+        <a href="#" class="transition-opacity hover:opacity-80"><img src="https://i.ibb.co/WWGs4jSW/facebook.png" alt="Facebook" class="w-6 h-6"></a>
+        <a href="#" class="transition-opacity hover:opacity-80"><img src="https://i.ibb.co/Jjr4Cz0c/twitter-alt-circle.png" alt="X" class="w-6 h-6"></a>
+        <a href="#" class="transition-opacity hover:opacity-80"><img src="https://i.ibb.co/0Rd3s3Bc/instagram.png" alt="Instagram" class="w-6 h-6"></a>
+    </div>
+     <div class="community-icons flex items-center space-x-5 mt-4">
+         <a href="#" class="transition-opacity hover:opacity-80"><img src="https://i.ibb.co/JFztk7R1/p5-13-coinmarketcap-1648145380.png" alt="CoinMarketCap" class="h-6"></a>
+         <a href="#" class="transition-opacity hover:opacity-80"><img src="https://i.ibb.co/6RtjNnTt/youtube.png" alt="Youtube" class="w-6 h-6"></a>
+    </div>
+    <div class="mt-6 pt-4">
+        <button id="footer-language-button-mobile" class="flex items-center w-full space-x-2 text-gray-700 hover:text-brand transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <span id="footer-language-text-mobile">语言</span>
+        </button>
+    </div>
+</div>
+
+        <div class="border-t border-gray-200 mt-8 pt-8 text-center text-sm text-gray-500">
+            <p data-translate-key="footer_copyright">© 2025 佰易. 版权所有.</p>
+        </div>
+    </div>
+</footer>
+    
+    <div id="language-modal" class="hidden fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center p-4 z-50 opacity-0 transition-opacity duration-300">
+        <div id="language-modal-panel" class="bg-white dark:bg-gray-800 rounded-xl shadow-2xl w-full max-w-lg transform transition-all duration-300 ease-out opacity-0 scale-95">
+            <div class="flex justify-between items-center p-5 border-b border-gray-200 dark:border-gray-700">
+                <div class="flex items-center space-x-6">
+                    <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-100 border-b-2 border-brand pb-1" data-translate-key="language_modal_title">语言</h2>
+                </div>
+                <button id="language-modal-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors rounded-full p-1 hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <div class="p-6">
+                <div id="language-grid" class="grid grid-cols-2 gap-3 text-gray-800 dark:text-gray-200">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start of Self-Contained Support Widget -->
+    <div id="customer-support-widget-container">
+
+            <!-- 1. Floating Customer Support Button -->
+            <button id="open-support-btn" class="widget-font fixed bottom-8 right-8 bg-teal-600 hover:bg-teal-700 text-white font-semibold p-3 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 z-50">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="w-6 h-6"><path d="M425.7 80C391 44.9 342.3 32 296 32h-80c-46.3 0-95 12.9-129.7 48C50.7 115.6 32 163.6 32 208v16c0 8.8-7.2 16-16 16s-16-7.2-16-16V208C0 141.1 23.2 81.1 64.9 41.6S164.9 0 216 0h80c51.1 0 101.1 23.2 141.6 64.9s64.9 96.7 64.9 148.8v16c0 8.8-7.2 16-16 16s-16-7.2-16-16V224c0-44.4-18.7-92.4-54.3-128zM128 224v128c0 26.5-21.5 48-48 48s-48-21.5-48-48V224c0-44.2 35.8-80 80-80h16c44.2 0 80 35.8 80 80v128c0 26.5-21.5 48-48 48s-48-21.5-48-48V224H128zm256 0v128c0 26.5-21.5 48-48 48s-48-21.5-48-48V224c0-44.2 35.8-80 80-80h16c44.2 0 80 35.8 80 80v128c0 26.5-21.5 48-48 48s-48-21.5-48-48V224h-64z"/></svg>
+            </button>
+
+        <!-- 2. Support Modal Container -->
+        <div id="support-modal-backdrop" class="widget-font fixed inset-0 z-[1000] modal-backdrop hidden flex items-center justify-center sm:items-end sm:justify-end opacity-0 transition-opacity duration-300 ease-in-out">
+            
+            <!-- View 1: FAQ Modal (Responsive Layout) -->
+            <div id="faq-view" class="bg-white text-gray-800 w-full h-full rounded-none sm:rounded-2xl shadow-2xl sm:w-auto sm:max-w-[440px] sm:h-auto sm:max-h-[calc(100vh-8rem)] sm:mb-24 sm:mr-8 flex flex-col transform transition-all duration-300 ease-in-out scale-95 opacity-0 origin-center sm:origin-bottom-right overflow-hidden">
+                
+                <!-- New Important Announcement Toast Notification -->
+                <div id="new-announcement-toast" class="bg-teal-500 text-white flex justify-between items-center transition-all duration-500 ease-in-out">
+                    <div class="flex items-center gap-3 overflow-hidden p-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="w-5 h-5 flex-shrink-0"><path d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM256 336c-13.3 0-24 10.7-24 24s10.7 24 24 24s24-10.7 24-24s-10.7-24-24-24zM232 160c0-13.3 10.7-24 24-24s24 10.7 24 24v96c0 13.3-10.7 24-24 24s-24-10.7-24-24V160z"/></svg>
+                        <a href="#" id="toast-announcement-link" class="truncate text-sm font-semibold hover:underline"></a>
+                    </div>
+                    <button id="close-toast-btn" class="text-xl font-bold leading-none flex-shrink-0 px-4 py-2 opacity-70 hover:opacity-100">&times;</button>
+                </div>
+
+                <!-- Modal Header -->
+                <div class="flex-shrink-0 flex justify-between items-center p-6 border-b border-gray-200">
+                    <h2 class="text-2xl font-bold text-black" data-widget-translate-key="widget_header">客户支持</h2>
+                    <button class="close-modal-btn text-gray-400 hover:text-black transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" class="w-5 h-5"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+                    </button>
+                </div>
+
+                <!-- Scrollable Modal Body -->
+                <div id="faq-scroll-content" class="flex-grow p-6 overflow-y-auto">
+                    <!-- Announcement Banner -->
+                    <div id="announcement-banner" class="bg-gray-100 px-3 py-2 rounded-lg flex items-center gap-3 mb-6 overflow-hidden h-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" class="w-5 h-5 text-teal-600 flex-shrink-0"><path d="M320 0c-17.7 0-32 14.3-32 32V48H192V32c0-17.7-14.3-32-32-32s-32 14.3-32 32V48H112V32c0-17.7-14.3-32-32-32S48 14.3 48 32V48H32C14.3 48 0 62.3 0 80V432c0 35.3 28.7 64 64 64H416c35.3 0 64-28.7 64-64V80c0-17.7-14.3-32-32-32H400V32c0-17.7-14.3-32-32-32s-32 14.3-32 32V48H320V32zM64 432V160H416V432H64z"/></svg>
+                        <div id="announcement-ticker" class="w-full h-full relative">
+                        </div>
+                    </div>
+
+                    <p class="text-gray-500 mb-6 text-sm" data-widget-translate-key="widget_intro">
+                        查看下方的常见问题以获得即时解决方案。如果常见问题无法解决您的问题，请点击下面的按钮联系我们的在线支持团队。
+                    </p>
+
+                    <!-- Self service section -->
+                    <div class="mb-8">
+                        <h3 class="text-lg font-semibold text-black mb-4" data-widget-translate-key="widget_self_service">自助服务</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="https://100ex.zendesk.com/hc/zh-cn/articles/46056201877529-%E5%A6%82%E4%BD%95%E9%87%8D%E7%BD%AE%E8%B0%B7%E6%AD%8C%E9%AA%8C%E8%AF%81%E7%A0%81" target="_blank" rel="noopener noreferrer" class="service-btn p-4 rounded-lg flex items-center gap-4 text-left">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" class="w-5 h-5 text-gray-500"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+                                <span class="text-gray-800" data-widget-translate-key="widget_ss_1">重置谷歌验证器</span>
+                            </a>
+                            <a href="https://100ex.zendesk.com/hc/zh-cn/articles/46055234188825-%E6%94%B6%E4%B8%8D%E5%88%B0%E9%AA%8C%E8%AF%81%E7%A0%81%E6%80%8E%E4%B9%88%E5%8A%9E" target="_blank" rel="noopener noreferrer" class="service-btn p-4 rounded-lg flex items-center gap-4 text-left">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" class="w-5 h-5 text-gray-500"><path d="M384 0C366.3 0 352 14.3 352 32s14.3 32 32 32h32V96H160V64h32c17.7 0 32-14.3 32-32s-14.3-32-32-32H160 128 80C62.3 0 48 14.3 48 32s14.3 32 32 32H96V96H48c-26.5 0-48 21.5-48 48v96h64c35.3 0 64 28.7 64 64v32c0 35.3-28.7 64-64 64H0v96c0 26.5 21.5 48 48 48H336c26.5 0 48-21.5 48-48V368h64c35.3 0 64-28.7 64-64V256c0-35.3-28.7-64-64-64H384V64h32c17.7 0 32-14.3 32-32s-14.3-32-32-32H384zM64 288c0-17.7-14.3-32-32-32H0v32H32c17.7 0 32-14.3 32-32zm352 32a32 32 0 1 1 0-64 32 32 0 1 1 0 64z"/></svg>
+                                <span class="text-gray-800" data-widget-translate-key="widget_ss_2">收不到验证码</span>
+                            </a>
+                            <a href="https://100ex.zendesk.com/hc/zh-cn/articles/46054832990745-%E5%A6%82%E4%BD%95%E6%8F%90%E4%BA%A4-KYC-%E8%AE%A4%E8%AF%81" target="_blank" rel="noopener noreferrer" class="service-btn p-4 rounded-lg flex items-center gap-4 text-left">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="currentColor" class="w-5 h-5 text-gray-500"><path d="M0 48C0 21.5 21.5 0 48 0H224c17.7 0 32 14.3 32 32s-14.3 32-32 32H48V464H224c17.7 0 32 14.3 32 32s-14.3 32-32 32H48c-26.5 0-48-21.5-48-48V48zM528 0c-26.5 0-48 21.5-48 48V464c0 26.5 21.5 48 48 48s48-21.5 48-48V48c0-26.5-21.5-48-48-48zM288 96c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H320c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H320c-17.7 0-32-14.3-32-32zM288 320c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H320c-17.7 0-32-14.3-32-32z"/></svg>
+                                <span class="text-gray-800" data-widget-translate-key="widget_ss_3">如何身份认证</span>
+                            </a>
+                            <a href="https://100ex.zendesk.com/hc/zh-cn/articles/46055701344921-%E5%BF%98%E8%AE%B0%E7%9B%B8%E5%85%B3%E5%AF%86%E7%A0%81%E6%80%8E%E4%B9%88%E5%8A%9E" target="_blank" rel="noopener noreferrer" class="service-btn p-4 rounded-lg flex items-center gap-4 text-left">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" class="w-5 h-5 text-gray-500"><path d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"/></svg>
+                                <span class="text-gray-800" data-widget-translate-key="widget_ss_4">忘记密码怎么办</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <div>
+                        <h3 class="text-lg font-semibold text-black mb-4" data-widget-translate-key="widget_faq_title">常见问题</h3>
+                        <!-- Search Input -->
+                        <div class="relative mb-4">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="w-4 h-4 text-gray-400"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                            </span>
+                            <input type="search" id="faq-search" class="w-full bg-gray-100 border border-gray-300 text-gray-900 rounded-lg p-2 pl-10 focus:outline-none focus:ring-2 focus:ring-teal-500" placeholder="搜索问题...">
+                        </div>
+                        
+                        <div class="flex flex-row">
+                            <div class="flex-shrink-0">
+                                <nav id="faq-nav" class="relative flex flex-col border-r-2 border-gray-200">
+                                    <div id="faq-nav-highlighter" class="absolute right-[-2px] w-0.5 bg-teal-600 transition-all duration-300 ease-in-out"></div>
+                                </nav>
+                            </div>
+                            <div id="faq-results-container" class="flex-grow pl-8">
+                                <ul id="faq-list" class="space-y-5">
+                                </ul>
+                                <p id="no-results" class="text-gray-500 hidden"></p>
+                                <p id="faq-loading" class="text-gray-500"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="flex-shrink-0 p-6">
+                     <button id="start-chat-from-faq-btn" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-6 rounded-lg flex items-center justify-center gap-3 transition-colors duration-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="w-6 h-6"><path d="M425.7 80C391 44.9 342.3 32 296 32h-80c-46.3 0-95 12.9-129.7 48C50.7 115.6 32 163.6 32 208v16c0 8.8-7.2 16-16 16s-16-7.2-16-16V208C0 141.1 23.2 81.1 64.9 41.6S164.9 0 216 0h80c51.1 0 101.1 23.2 141.6 64.9s64.9 96.7 64.9 148.8v16c0 8.8-7.2 16-16 16s-16-7.2-16-16V224c0-44.4-18.7-92.4-54.3-128zM128 224v128c0 26.5-21.5 48-48 48s-48-21.5-48-48V224c0-44.2 35.8-80 80-80h16c44.2 0 80 35.8 80 80v128c0 26.5-21.5 48-48 48s-48-21.5-48-48V224H128zm256 0v128c0 26.5-21.5 48-48 48s-48-21.5-48-48V224c0-44.2 35.8-80 80-80h16c44.2 0 80 35.8 80 80v128c0 26.5-21.5 48-48 48s-48-21.5-48-48V224h-64z"/></svg>
+                        <span data-widget-translate-key="widget_start_chat">客户支持</span>
+                    </button>
+                 </div>
+            </div>
+        </div>
+
+        <style>
+            .widget-font { font-family: 'Inter', sans-serif; }
+            .modal-backdrop { background-color: rgba(0, 0, 0, 0.7); }
+            .service-btn { background-color: #ffffff; border: 1px solid #e5e7eb; transition: background-color 0.2s, transform 0.2s; }
+            .service-btn:hover { background-color: #f9fafb; transform: translateY(-2px); }
+            .faq-nav-item.active { color: #000000; }
+            #faq-scroll-content::-webkit-scrollbar, #faq-nav::-webkit-scrollbar { width: 6px; height: 4px; }
+        </style>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="translation.js"></script> <!-- 引用翻译数据 -->
+    <script src="zendesk-api.js"></script> <!-- 引用 Zendesk API 逻辑 -->
+    <script src="main.js"></script> <!-- 引用主脚本文件 -->
+    <script src="support-widget.js"></script> <!-- 引用客户支持小部件逻辑 -->   
+    </body>
