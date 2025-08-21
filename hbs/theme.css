@@ -1,0 +1,38 @@
+/* HBS theme bridge: minimal overrides to mimic Zendesk Guide look */
+
+:root {
+    --brand: #00cfb6;
+    --brand-contrast: #00a692;
+}
+
+.zd-header .active,
+.zd-footer a:hover,
+.zd-hero a:hover {
+    color: var(--brand-contrast);
+}
+
+.zd-hero {
+    background: #ffffff;
+}
+
+.zd-footer {
+    background: #ffffff;
+}
+
+/* Match list spacing and typography closer to Guide */
+#zendesk-popular-list-desktop li a,
+#zendesk-latest-list-desktop li a,
+#zendesk-popular-list-mobile li a,
+#zendesk-latest-list-mobile-container li a {
+    color: #111827;
+}
+#zendesk-popular-list-desktop li a:hover,
+#zendesk-latest-list-desktop li a:hover,
+#zendesk-popular-list-mobile li a:hover,
+#zendesk-latest-list-mobile-container li a:hover {
+    color: var(--brand-contrast);
+}
+
+.refresh-button { transition: transform .2s ease; }
+.refresh-button:hover { transform: rotate(90deg); }
+

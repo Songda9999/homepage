@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>佰易帮助中心 - HBS 预览</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./theme.css">
+</head>
+<body class="font-sans bg-gray-50 text-gray-900">
+    <!-- Header (HBS-like) -->
+    <header class="zd-header bg-white border-b border-gray-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center space-x-2">
+                <img class="h-8 w-auto" src="https://i.ibb.co/vCv92HS7/byexlogo.png" alt="BYEX Logo"/>
+                <span class="sr-only">BYEX</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a class="text-sm text-gray-700" href="#" data-translate-key="nav_market">市场行情</a>
+                <a class="text-sm text-gray-700" href="#" data-translate-key="nav_futures">合约交易</a>
+                <a class="text-sm text-gray-700" href="#" data-translate-key="nav_finance">金融理财</a>
+            </nav>
+        </div>
+    </header>
+
+    <main role="main">
+        <!-- Hero Search (HBS-like) -->
+        <section class="zd-hero bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 text-center">
+                <h1 class="text-3xl sm:text-4xl font-bold mb-4" data-translate-key="header_title">佰易帮助中心</h1>
+                <div class="max-w-2xl mx-auto">
+                    <div class="relative">
+                        <input id="header-search" type="search" class="w-full p-4 pl-4 bg-white border-2 border-gray-200 rounded-lg" placeholder="搜索或提问"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ blocks (HBS-like categories) -->
+        <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-xl sm:text-2xl font-bold" data-translate-key="faq_title">常见问题</h2>
+                <div class="flex items-center space-x-3">
+                    <button id="refresh-popular" class="refresh-button text-gray-500" aria-label="Refresh popular">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                    </button>
+                    <button id="refresh-latest" class="refresh-button text-gray-500" aria-label="Refresh latest">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                    <h3 class="font-bold text-lg mb-4 flex items-center"><img src="https://i.ibb.co/sdFGh0cF/flame.png" alt="热门问题图标" class="w-6 h-6 mr-2"><span data-translate-key="faq_popular">热门问题</span></h3>
+                    <ul id="zendesk-popular-list-desktop" class="space-y-4"><li></li></ul>
+                    <div class="lg:hidden mt-4"><ul id="zendesk-popular-list-mobile" class="space-y-3"><li></li></ul></div>
+                </div>
+                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                    <h3 class="font-bold text-lg mb-4 flex items-center"><img src="https://i.ibb.co/k6VtcZYb/lightbulb-on.png" alt="最新发布文章图标" class="w-6 h-6 mr-2"><span data-translate-key="faq_latest">最新发布文章</span></h3>
+                    <ul id="zendesk-latest-list-desktop" class="space-y-4"><li></li></ul>
+                    <div id="zendesk-latest-list-mobile-container" class="lg:hidden mt-4"><ul class="space-y-3"><li></li></ul></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (HBS-like) -->
+    <footer class="zd-footer bg-white border-t border-gray-200">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <p class="text-sm text-gray-500" data-translate-key="footer_copyright">© 2025 佰易. 版权所有.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts: load translations first, then main + zendesk api + adapter -->
+    <script>
+        window.translations = {};
+        window.languages = [
+            { code: 'zh-CN', name: '简体中文' },
+            { code: 'en-US', name: 'English' }
+        ];
+    </script>
+    <script src="../translation.js"></script>
+    <script src="../main.js"></script>
+    <script src="../zendesk-api.js"></script>
+    <script src="./adapter.js"></script>
+</body>
+</html>
+
