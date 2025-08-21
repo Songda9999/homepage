@@ -28,45 +28,115 @@
     </header>
 
     <main role="main">
-        <!-- Hero Search (HBS-like) -->
-        <section class="zd-hero bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 text-center">
-                <h1 class="text-3xl sm:text-4xl font-bold mb-4" data-translate-key="header_title">佰易帮助中心</h1>
-                <div class="max-w-2xl mx-auto">
-                    <div class="relative">
-                        <input id="header-search" type="search" class="w-full p-4 pl-4 bg-white border-2 border-gray-200 rounded-lg" placeholder="搜索或提问"/>
-                    </div>
-                </div>
+        <!-- ===== 顶部欢迎区（HBS结构） ===== -->
+        <header class="hero">
+          <div class="hero__inner">
+            <h2 class="hero__sub">欢迎访问</h2>
+            <div class="hero__titleWrap">
+              <h1 class="hero__title">佰易帮助中心</h1>
+              <svg class="hero__bubble" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="#00cfb6">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M29.9979 4.99902C16.1911 4.99902 4.99756 16.1925 4.99756 29.9994C4.99756 35.6653 6.88327 40.8909 10.0605 45.0841L6.77905 54.0101L16.8466 51.2643C20.6667 53.6322 25.1726 54.9997 29.9979 54.9997C43.8047 54.9997 54.9982 43.8072 54.9982 29.9994C54.9982 16.1916 43.8047 4.99902 29.9979 4.99902ZM42.0026 29.0002V35.6669H39.9819C38.2611 38.2376 35.5733 40.1064 32.4389 40.7528C32.0231 41.6843 31.0887 42.3336 30.0026 42.3336C28.5298 42.3336 27.3359 41.1397 27.3359 39.6669C27.3359 38.1942 28.5298 37.0002 30.0026 37.0002C30.8833 37.0002 31.6643 37.4272 32.1499 38.0854C33.833 37.6891 35.3404 36.8372 36.5346 35.6669H35.3359V27.6669H38.5673C37.926 23.5135 34.3357 20.3336 30.0026 20.3336C25.6696 20.3336 22.0792 23.5135 21.4379 27.6669H24.6693V35.6669H18.0026V29.0002C18.0026 22.3728 23.3752 17.0002 30.0026 17.0002C36.1793 17.0002 41.2661 21.667 41.9294 27.6669C41.9333 27.7023 41.937 27.7378 41.9406 27.7733C41.9816 28.1767 42.0026 28.586 42.0026 29.0002Z"/>
+              </svg>
             </div>
+            <div class="hero__search">
+              <div class="hero__searchIcon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <input id="hero-search-input" type="search" placeholder="搜索或提问" class="hero__searchInput">
+              <!-- 保留 main.js 的占位符更新钩子：隐藏输入供占位符同步使用 -->
+              <input id="header-search" type="text" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true" />
+            </div>
+          </div>
+        </header>
+
+        <!-- ===== 自助服务（结构占位，动态适配不改现有JS） ===== -->
+        <section id="self-service" class="home-block">
+          <div class="block-head">
+            <h2 class="block-title">自助服务</h2>
+            <a id="self-more" class="block-more" href="#">更多 &gt;</a>
+          </div>
+          <div class="self-wrap">
+            <div class="slides" id="self-slides"><!-- 预览占位 --></div>
+            <div class="self-pager">
+              <button id="self-prev" class="navbtn" aria-label="Prev">‹</button>
+              <div id="self-dots" class="dots"></div>
+              <button id="self-next" class="navbtn" aria-label="Next">›</button>
+            </div>
+          </div>
         </section>
 
-        <!-- FAQ blocks (HBS-like categories) -->
-        <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div class="flex items-center justify-between mb-4">
-                <h2 class="text-xl sm:text-2xl font-bold" data-translate-key="faq_title">常见问题</h2>
-                <div class="flex items-center space-x-3">
-                    <button id="refresh-popular" class="refresh-button text-gray-500" aria-label="Refresh popular">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
-                    </button>
-                    <button id="refresh-latest" class="refresh-button text-gray-500" aria-label="Refresh latest">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
-                    </button>
-                </div>
+        <!-- ===== 常见问题（显示用 HBS 容器，数据由适配层镜像） ===== -->
+        <section id="faq" class="faq-block">
+          <div class="block-head">
+            <h2 class="block-title">常见问题</h2>
+            <a id="faq-more" class="block-more" href="#">更多 &gt;</a>
+          </div>
+          <div class="faq-grid">
+            <div class="faq-card">
+              <div class="faq-card-head">
+                <h3 class="faq-card-title"><img class="faq-icon" src="https://i.ibb.co/sdFGh0cF/flame.png" alt=""> 热门问题</h3>
+                <button id="faq-refresh-pop" class="refresh" aria-label="刷新">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                  </svg>
+                </button>
+              </div>
+              <ul id="faq-pop-list" class="faq-list"></ul>
             </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div class="bg-white p-6 rounded-lg border border-gray-200">
-                    <h3 class="font-bold text-lg mb-4 flex items-center"><img src="https://i.ibb.co/sdFGh0cF/flame.png" alt="热门问题图标" class="w-6 h-6 mr-2"><span data-translate-key="faq_popular">热门问题</span></h3>
-                    <ul id="zendesk-popular-list-desktop" class="space-y-4"><li></li></ul>
-                    <div class="lg:hidden mt-4"><ul id="zendesk-popular-list-mobile" class="space-y-3"><li></li></ul></div>
-                </div>
-                <div class="bg-white p-6 rounded-lg border border-gray-200">
-                    <h3 class="font-bold text-lg mb-4 flex items-center"><img src="https://i.ibb.co/k6VtcZYb/lightbulb-on.png" alt="最新发布文章图标" class="w-6 h-6 mr-2"><span data-translate-key="faq_latest">最新发布文章</span></h3>
-                    <ul id="zendesk-latest-list-desktop" class="space-y-4"><li></li></ul>
-                    <div id="zendesk-latest-list-mobile-container" class="lg:hidden mt-4"><ul class="space-y-3"><li></li></ul></div>
-                </div>
+            <div class="faq-card">
+              <div class="faq-card-head">
+                <h3 class="faq-card-title"><img class="faq-icon" src="https://i.ibb.co/k6VtcZYb/lightbulb-on.png" alt=""> 最新发布文章</h3>
+                <button id="faq-refresh-latest" class="refresh" aria-label="刷新">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                  </svg>
+                </button>
+              </div>
+              <ul id="faq-latest-list" class="faq-list"></ul>
             </div>
+          </div>
         </section>
+
+        <!-- ===== 指南 / 公告（结构占位） ===== -->
+        <section id="guide-sections" class="cards4">
+          <div class="block-head">
+            <h2 class="block-title">指南</h2>
+            <span class="block-more-spacer"></span>
+          </div>
+          <div id="guide-sections-grid" class="cards4-grid"></div>
+        </section>
+
+        <section id="announce-sections" class="cards4">
+          <div class="block-head">
+            <h2 class="block-title">公告中心</h2>
+            <a id="announce-more" class="block-more" href="#">更多 &gt;</a>
+          </div>
+          <div id="announce-sections-grid" class="cards4-grid"></div>
+        </section>
+
+        <!-- ===== Support CTA ===== -->
+        <section id="support-cta" class="support-block">
+          <h2 class="support-title"></h2>
+          <a id="support-card" class="support-card" href="#" aria-label="Open support">
+            <div class="support-text">
+              <h3 id="support-card-title" class="support-card-title"></h3>
+              <p  id="support-card-desc"  class="support-card-desc"></p>
+              <span id="support-card-cta"   class="support-card-cta"></span>
+            </div>
+            <img class="support-img" alt="" src="https://i.ibb.co/M51V9Xv2/customer-care.png"
+                 onerror="this.onerror=null;this.src='https://placehold.co/120x120/e6f9f7/00cfb6?text=Chat';">
+          </a>
+        </section>
+
+        <!-- 隐藏的原有 Zendesk 列表容器（供现有动态脚本使用） -->
+        <div style="display:none">
+            <ul id="zendesk-popular-list-desktop"><li></li></ul>
+            <div id="zendesk-latest-list-mobile-container"><ul><li></li></ul></div>
+            <ul id="zendesk-popular-list-mobile"><li></li></ul>
+            <ul id="zendesk-latest-list-desktop"><li></li></ul>
+        </div>
     </main>
 
     <!-- Footer (HBS-like) -->
@@ -76,7 +146,7 @@
         </div>
     </footer>
 
-    <!-- Scripts: load translations first, then main + zendesk api + adapter -->
+    <!-- HBS 样式（合并在 theme.css），脚本：加载翻译与现有动态，然后适配到 HBS 容器 -->
     <script>
         window.translations = {};
         window.languages = [
